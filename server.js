@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const db = require('./db');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 // ṃiddle ware
 app.use(bodyParser.json());
@@ -19,6 +20,9 @@ const personRoutes = require('./Routes/PersonRoutes');
 app.use('/person', personRoutes);
 
 
-app.listen(3000, ()=>{
+const PORT = process.env.PORT || 3000;
+
+
+app.listen(PORT, ()=>{
     console.log('listen on Port 3000');
 });
