@@ -8,7 +8,8 @@ require('dotenv').config();
 app.use(bodyParser.json());
 
 
-const Person = require('D:/Full stack/Backend/Lecture_5/person.js');
+// const Person = require('D:/Full stack/Backend/Lecture_5/person.js');
+const Person = require('./person.js');
 
 
 app.get('/', function(req, res){
